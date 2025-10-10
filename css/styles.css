@@ -1,0 +1,104 @@
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header {
+    border-bottom: 1px solid var(--color-cornflower);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    background-color: #75D281;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* flex-direction: column; */
+    gap: 0px;
+    height: 72px;
+}
+
+.flex-header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.header-ecotote {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #030A06;
+    font-family: "Raleway", sans-serif;
+    margin-left: 64px;
+}
+
+.ecologo {
+
+}
+
+.header-nav-list {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #030A06;
+    cursor: pointer;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+
+.header-address {
+    font-style: normal;
+    position: absolute;
+    right: 64px;
+}
+
+.nav-list-contact {
+    gap: 32px;
+}
+
+.header-social-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-list-contact-a {
+    color: #030A06;
+}
+
+.header-social-list-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-slate);
+    display: flex;
+} 
+
+.header-social-list-item:hover,
+:focus {
+
+}
+
+
+
+
