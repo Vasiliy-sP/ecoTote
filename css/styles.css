@@ -12,16 +12,20 @@ li {
     list-style-type: none;
 }
 
+
+/* ============HEADER=============== */
+
+
+.container {
+    max-width: 320px;
+    height: 64px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 .header {
-    border-bottom: 1px solid var(--color-cornflower);
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
     background-color: #75D281;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* flex-direction: column; */
-    gap: 0px;
-    height: 72px;
+    position: relative;
 }
 
 .flex-header-box {
@@ -34,58 +38,64 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    /* gap: 32px; */
 }
 
-.header-ecotote {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #030A06;
-    font-family: "Raleway", sans-serif;
-    margin-left: 64px;
+.ul-ecotote {
+    display: none;
+}
+
+.header-address {
+    display: none;
+}
+
+.burger {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+
+}
+
+.burger-icon {
+    display: inline-block;
+    fill: #030A06;
 }
 
 .ecologo {
-
+    width: 84px;
+    height: 36px;
+    /* padding-top: 14px;
+    padding-bottom: 14px; */
 }
 
-.header-nav-list {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #030A06;
-    cursor: pointer;
-    display: flex;
+
+.nav-menu {
     gap: 32px;
-    align-items: center;
 }
 
+.nav-menu-a {
+    color: #030A06;
+}
 
-.header-address {
+/* .header-address {
     font-style: normal;
     position: absolute;
     right: 64px;
-}
+} */
 
-.nav-list-contact {
-    gap: 32px;
-}
-
-.header-social-list {
+.header-social-link {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.nav-list-contact-a {
-    color: #030A06;
-}
-
-.header-social-list-item {
+.social-list {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -94,7 +104,7 @@ li {
     display: flex;
 } 
 
-.header-social-list-item:hover,
+.social-link:hover,
 :focus {
 
 }
@@ -102,3 +112,209 @@ li {
 
 
 
+/* ===============mobile-menu========= */
+
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* z-index: 1000; */
+    background-color: #75D281;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-container {
+    /* position: relative;
+    padding-top: 14px;
+    padding-bottom: 32px; */
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+}
+
+.ecologo-mobile {
+    margin-left: 20px;
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    border: none;
+}
+
+.mobile-menu-nav {
+    margin-bottom: auto;
+    margin-top: 32px;
+}
+
+
+.mobile-nav-li {
+    padding-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-a {
+    
+}
+
+.mobil-social-li:hover,
+.mobil-social-li:focus,
+.mobile-nav-li:hover,
+.mobile-nav-li:focus {
+    
+}
+
+.mobil-social-li {
+    padding-bottom: 24px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-style: normal;
+}
+
+.color-number {
+    
+}
+
+.mobile-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-top: 32px;
+}
+
+.mobile-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-svg {
+    display: block;
+}
+
+
+/* ===================MEDIA-SCREEN================ */
+
+@media screen and (min-width:768px) {
+    .container {
+        min-width: 768px;
+    }
+
+}
+
+/* =================1440====================== */
+
+@media screen and (min-width:1440px) {
+
+    .container {
+            min-width: 1440px;
+            /* padding: 0 15px; */
+            height: 72px;
+        }
+
+    .header {
+        display: block;
+    }
+
+    .header-ecotote {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #030A06;
+        font-family: "Raleway", sans-serif;
+        margin-left: 64px;
+    }
+
+    .ul-ecotote {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #030A06;
+        cursor: pointer;
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .ecologo {
+        width: 106.51px;
+        height: 45.65px;
+        justify-content: space-between;
+    }
+
+    .header-address {
+        font-style: normal;
+        position: absolute;
+        right: 64px;
+        display: block;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .nav-menu-a {
+        position: relative;
+    }
+
+    .nav-menu-a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background-color: transparent;
+    }
+
+    .nav-menu-a:hover::after,
+    .nav-menu-a:focus::after {
+        background-color: currentColor;
+    }
+
+    .nav-menu-a:active {
+        color: #3ac04c;
+    }
+
+    .nav-menu-a:active::after {
+        background-color: currentColor;
+    }
+}
