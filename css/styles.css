@@ -409,7 +409,89 @@ li {
     color: #030a06;
 }
 
-/* .advantages table */
+/* ===========planet=========== */
+
+.planet-section {
+    padding: 80px 0;
+    background-color: #fff;
+    /* display: flex; */
+        
+}
+
+.planet-conteiner {
+    min-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+    
+}
+
+.planet-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.planet-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.planet-picture {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.planet-div {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff; 
+    
+    
+}
+
+.planet-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 3; */
+    display: flex;
+    
+    
+}
+
+.planet-title {
+    font-size: 56px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.planet-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    max-width: 360px;
+}
+
+/* .advantages table  */
 @media (min-width: 768px) {
 
 .advantages-section {
